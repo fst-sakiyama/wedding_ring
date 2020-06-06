@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Ring_template;
 use App\Models\Ring_class;
+use App\Models\CountSearch;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class SubjectController extends Controller
 {
@@ -23,7 +25,6 @@ class SubjectController extends Controller
                   ->get();
         $className = Ring_class::find($request->id);
       } else {
-        $bool=false;
         $items = Ring_template::with('class')
                   ->orderBy('class_id','asc')
                   ->get();
@@ -40,6 +41,7 @@ class SubjectController extends Controller
     {
       $deleted=null;
       $className=null;
+      $datum=array();
 
       $query = Ring_template::with('class');
 
@@ -55,7 +57,10 @@ class SubjectController extends Controller
         if(isset($request->search[$i])){
           $item = $request->search[$i];
           $query->where('body','like','%'.$item.'%');
-          // echo "<script type='text/javascript'>alert('". $i. "');</script>";
+          // echo "<script type='text/javascript'>alert('". $item. "');</script>";
+          $now=Carbon::now();
+          $datum = array('tableNo'=>1,'word'=>$item,'created_at'=>$now,'updated_at'=>$now);
+          CountSearch::insert($datum);
         }
       }
       $items = $query->orderBy('class_id','asc')->get();

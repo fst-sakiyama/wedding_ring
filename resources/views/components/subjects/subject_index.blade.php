@@ -4,9 +4,9 @@
 	<div class="container">
 		<br>
 		@if(isset($className))
-		<h1 style="padding-bottom:10px">@include('components.returnButton'){{ $className->className }}</h1>
+			@include('components.titleText',['title'=>$className->className])
 		@else
-		<h1 style="padding-bottom:10px">@include('components.returnButton')件名一覧</h1>
+			@include('components.titleText',['title'=>'件名一覧'])
 		@endif
 		<div style="padding-bottom:10px">
 		<form class="form-horizontal" action="{{asset('subjects')}}" method="post">
@@ -44,7 +44,7 @@
 				@endforeach
 			</tbody>
 		</table>
-		@if(isset($deleted))
+		@if(!empty($deleted[0]->id))
 		<br>
 		<h3>削除済</h3>
 		<br>

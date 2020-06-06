@@ -25,6 +25,8 @@
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="{{asset('/classes')}}">分類一覧ページ</a>
                 <a class="dropdown-item" href="{{asset('/subjects')}}">件名一覧ページ</a>
+                <a class="dropdown-item" href="{{asset('/basic_data')}}">基本情報一覧ページ</a>
+                <a class="dropdown-item" href="{{asset('/answers')}}">回答集一覧ページ</a>
                 <div class="dropdown-divider"></div>
 
               </div>

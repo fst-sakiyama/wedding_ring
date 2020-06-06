@@ -30,3 +30,13 @@ $("#delBtn").click(function(){
     });
   }
 });
+
+$('.copyArea')
+  .focus(function(e) {
+    $(this).css('background-color', '#ffb6c1');
+    $(this).select();
+    document.execCommand('Copy');
+  })
+  .blur(function(e) {
+    $(this).css('background-color', '');
+  });

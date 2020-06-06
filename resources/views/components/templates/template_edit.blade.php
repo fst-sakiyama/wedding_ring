@@ -3,7 +3,7 @@
 <div class="contents">
 	<div class="container">
 		<br>
-		<h1 style="padding-bottom:10px">@include('components.returnButton')テンプレートの修正</h1>
+		@include('components.titleText',['title'=>'テンプレートの修正'])
     @if (count($errors) > 0)
       <div>
         <ul>
@@ -35,13 +35,13 @@
       <div class="form-group row">
         <label class="col-sm-2 col-form-label">本文：</label>
         <div class="col-sm-10">
-          <textarea id="textarea" class="form-control" name="body" style="height:600px">{{ $item->body }}</textarea>
+          <textarea id="textarea" class="form-control" name="body">{{ $item->body }}</textarea>
         </div>
       </div>
      	<div class="form-group row">
        <label class="col-sm-2 col-form-label">注意事項：</label>
        <div class="col-sm-10">
-         <textarea id="caution" class="form-control" name="caution" style="height:200px">{{ $item->caution }}</textarea>
+         <textarea id="caution" class="form-control" name="caution">{{ $item->caution }}</textarea>
     	</div>
     	</div>
       <div class="text-center" style="padding-top:10px">

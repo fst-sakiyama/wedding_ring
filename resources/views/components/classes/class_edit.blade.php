@@ -3,7 +3,7 @@
 <div class="contents">
 	<div class="container">
 		<br>
-		<h1 style="padding-bottom:10px">@include('components.returnButton')分類の修正</h1>
+		@include('components.titleText',['title'=>'分類の修正'])
     @if (count($errors) > 0)
       <div>
         <ul>

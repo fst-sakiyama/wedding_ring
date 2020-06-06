@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('wedding_ring','Wedding_ringController@index')->name('top');
+Route::post('wedding_ring','Wedding_ringController@search');
 
 Route::get('/classes','ClassController@index')->name('class');
 Route::get('/classes/add','ClassController@add');
@@ -36,3 +37,20 @@ Route::get('/templates/remove','TemplateController@remove');
 Route::post('/subjects','SubjectController@search');
 Route::post('/subjects/restore','SubjectController@restore');
 Route::post('/subjects/force_delete','SubjectController@force_delete');
+
+Route::get('/basic_data','Basic_dataController@index');
+Route::get('/basic_data/detail','Basic_dataController@detail');
+Route::get('/basic_data/add','Basic_dataController@add');
+Route::post('/basic_data/add','Basic_dataController@create');
+Route::get('/basic_data/edit','Basic_dataController@edit');
+Route::post('/basic_data/edit','Basic_dataController@update');
+Route::get('/basic_data/remove','Basic_dataController@remove');
+Route::post('/basic_data/restore','Basic_dataController@restore');
+
+Route::get('/answers','AnswerController@index');
+Route::post('/answers/add','AnswerController@create');
+Route::get('/answers/edit','AnswerController@edit');
+Route::post('/answers/edit','AnswerController@update');
+Route::get('/answers/remove','AnswerController@remove');
+Route::get('/answers/restore','AnswerController@restore');
+Route::get('/answers/force_delete','AnswerController@force_delete');
