@@ -11,6 +11,17 @@
 					<div class="mb-sm-3">
 				    	@include('components.cntContact')
 					</div>
+<!-- -->
+					<div class="mb-sm-3 ml-sm-2">
+						<h5>「個人情報保護に関する文言」<h5>
+						<div class="form-check">
+							<div class="ml-sm-3">
+								<input class="form-check-input" type="checkbox" id="personalInfo" value="personalInfo">
+								<label class="form-check-label" id="personalInfoLabel">必要ならばチェック</label>
+							</div>
+						</div>
+					</div>
+<!-- -->
 					<div class="mb-sm-3 ml-sm-2">
 						<h5>「ギフト券プレゼント対象判定」<h5>
 						<div class="form-check">

@@ -64,7 +64,23 @@ $(function(){
     });
 });
 
-$('input[type="checkbox"]').click(function(){
+$('input[id="personalInfo"]').click(function(){
+    var str = $('#textarea').val();
+    var ex = str.match('※文中の情報は、個人情報のため一部伏字としております。');
+    if(ex==null){
+        var newstr = str.replace('ご連絡いただいた件に関して、回答をさせていただきます。','ご連絡いただいた件に関して、回答をさせていただきます。\n※文中の情報は、個人情報のため一部伏字としております。');
+        $('#textarea').val(newstr);
+        $("#personalInfoLabel").html('不要ならばチェックを外す');
+        $("#personalInfo").prop('checked',true).change();
+      } else {
+        var newstr = str.replace('※文中の情報は、個人情報のため一部伏字としております。\n','');
+        $('#textarea').val(newstr);
+        $("#personalInfoLabel").html('必要ならばチェック');
+        $("#personalInfo").prop('checked',false).change();
+      }
+});
+
+$('input[id="footerCheck"]').click(function(){
     var str = $('#textarea').val();
     var ex = str.match(/※なお、ギフト券プレゼント対象判定に関しましては、全ての締め切り終了後に規約内容に沿って審査を実施させていただきます。プレゼント対象と確定した方につきましては、商品の発送をもってご連絡とかえさせていただいております。本メールは対象確定をお約束するものではございませんのでご注意ください。/);
     if(ex!=null){
