@@ -16,7 +16,7 @@ class Ring_basic_datum extends Model
     public static $rules = array(
       'shortName' =>['required','string'],
       'formalName' => ['required','string'],
-      // 'pageURL' => ['required','string','url'],
+      'pageURL' => ['required','string','url'],
       // 'subjectEntry' => ['string'],
       // 'bodyEntry' => ['string'],
       // 'subjectApply' => ['string'],

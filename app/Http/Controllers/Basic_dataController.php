@@ -23,7 +23,7 @@ class Basic_dataController extends Controller
     }
 
     public function create(Request $request){
-      $this->validate($request,Ring_basic_datum::$rules($request->id));
+      // $this->validate($request,Ring_basic_datum::$rules($request->id));
       $ring_basic_datum = new Ring_basic_datum;
       $form=$request->all();
       unset($form['_token']);
