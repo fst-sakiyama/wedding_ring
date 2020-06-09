@@ -56,7 +56,7 @@
 					@include('components.basicData',['items'=>$items])
 				</div>
 				<div class="px-sm-2">
-					<form action="{{asset('/wedding_ring')}}" method="post">
+					<form action="{{asset('/wedding_ring')}}" method="post" target="_blank">
 					@include('components.answersSearch')
 					</form>
 				</div>
