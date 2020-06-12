@@ -9,7 +9,7 @@
 			@include('components.titleText',['title'=>'件名一覧'])
 		@endif
 		<div style="padding-bottom:10px">
-		<form class="form-horizontal" action="{{asset('subjects')}}" method="post">
+		<form class="form-horizontal" action="{{asset('subjects')}}" method="post" target="searchResult">
 		@include('components.searchBox',['items' => $ringClass,'className'=>$className])
 		</form>
 		</div>
