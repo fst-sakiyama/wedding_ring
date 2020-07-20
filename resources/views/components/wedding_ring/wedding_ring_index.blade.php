@@ -16,8 +16,8 @@
 						<h5>「個人情報保護に関する文言」<h5>
 						<div class="form-check">
 							<div class="ml-sm-3">
-								<input class="form-check-input" type="checkbox" id="personalInfo" value="personalInfo">
-								<label class="form-check-label" id="personalInfoLabel">必要ならばチェック</label>
+								<input class="form-check-input" type="checkbox" id="personalInfo" value="personalInfo" style="cursor:pointer;">
+								<label for="personalInfo" class="form-check-label" id="personalInfoLabel" style="cursor:pointer;">必要ならばチェック</label>
 							</div>
 						</div>
 					</div>
@@ -26,8 +26,8 @@
 						<h5>「ギフト券プレゼント対象判定」<h5>
 						<div class="form-check">
 							<div class="ml-sm-3">
-								<input class="form-check-input" type="checkbox" id="footerCheck" value="footerCheck" checked="checked">
-								<label class="form-check-label" id="footerCheckLabel">不要ならばチェックを外す</label>
+								<input class="form-check-input" type="checkbox" id="footerCheck" value="footerCheck" checked="checked" style="cursor:pointer;">
+								<label for="footerCheck" class="form-check-label" id="footerCheckLabel" style="cursor:pointer;">不要ならばチェックを外す</label>
 								<input class="form-control copyArea" id="footerCheckHidden" type="hidden" value="※なお、ギフト券プレゼント対象判定に関しましては、全ての締め切り終了後に規約内容に沿って審査を実施させていただきます。プレゼント対象と確定した方につきましては、商品の発送をもってご連絡とかえさせていただいております。本メールは対象確定をお約束するものではございませんのでご注意ください。">
 							</div>
 						</div>
@@ -36,16 +36,16 @@
 						<h5>「〆の一行」</h5>
 						<div class="ml-sm-3">
 							<div class="form-check">
-								<input type="radio" id="op1" name="op" class="form-check-input" value="op1" checked="checked">
-								<label class="form-check-label" for="op1">通常パターン</label>
+								<input type="radio" id="op1" name="op" class="form-check-input" value="op1" checked="checked" style="cursor:pointer;">
+								<label class="form-check-label" for="op1" style="cursor:pointer;">通常パターン</label>
 							</div>
 							<div class="form-check">
-								<input type="radio" id="op2" name="op" class="form-check-input" value="op2">
-								<label class="form-check-label" for="op2">今後も利用してくださる</label>
+								<input type="radio" id="op2" name="op" class="form-check-input" value="op2" style="cursor:pointer;">
+								<label class="form-check-label" for="op2" style="cursor:pointer;">今後も利用してくださる</label>
 							</div>
 							<div class="form-check">
-								<input type="radio" id="op3" name="op" class="form-check-input" value="op3">
-								<label class="form-check-label" for="op3">今後は利用してくださらない</label>
+								<input type="radio" id="op3" name="op" class="form-check-input" value="op3" style="cursor:pointer;">
+								<label class="form-check-label" for="op3" style="cursor:pointer;">今後は利用してくださらない</label>
 							</div>
 						</div>
 					</div>
